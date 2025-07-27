@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini CRM | Ventas y Marketing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>MINI CRM para Freelancers</h1>
+    <p>Gestión de prospectos, seguimiento y automatización básica</p>
+  </header>
+
+  <!-- 🎯 Filtro por estado -->
+  <section>
+    <label for="estado">Filtrar por estado:</label>
+    <select id="estado" onchange="filtrarEstado(this.value)">
+      <option value="">-- Todos --</option>
+      <option value="Pendiente">Pendiente</option>
+      <option value="Contactado">Contactado</option>
+      <option value="Seguimiento">Seguimiento</option>
+      <option value="Cerrado">Cerrado</option>
+    </select>
+  </section>
+
+  <!-- 🧾 Tabla de prospectos -->
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Empresa</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Tipo</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-prospectos">
+        <!-- Las filas se generan dinámicamente -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 📤 Simulación de envío -->
+  <section>
+    <button onclick="simularEnvio()">Simular envío de campaña</button>
+    <p id="estado-campaña"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini CRM - Ventas y Marketing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mini CRM para Freelancers</h1>
+    <p>Gestión de prospectos y automatización de marketing</p>
+  </header>
+
+  <section id="prospectos">
+    <h2>Lista de Prospectos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Empresa</th>
+          <th>Correo</th>
+          <th>Telefono</th>
+          <th>Tipo</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-prospectos">
+        ( Aquí se insertarán prospectos con JS )
+      </tbody>
+    </table>
+  </section>
+
+  <section id="campañas">
+    <h2>Campañas de Marketing</h2>
+    <button onclick="simularEnvio()">Simular envío de campaña</button>
+    <p id="estado-campaña"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+-->
